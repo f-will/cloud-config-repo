@@ -1,0 +1,30 @@
+app:
+  name: from-server
+  version: 1.0.9
+  profile: appli
+
+server:
+  port: 50007
+  servlet:
+    context-path: /config-client
+
+spring:
+  rabbitmq:
+    host: 10.122.145.4
+    port: 5672
+    username: admin
+    password: admin
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    client:
+      register-with-eureka: true
+
+# curl -X POST http://config-server:port/content-path/actuator/refresh
+# curl -X POST http://config-server:port/content-path/actuator/bus-refresh
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
