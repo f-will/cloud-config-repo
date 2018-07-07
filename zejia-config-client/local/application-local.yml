@@ -1,6 +1,7 @@
 app:
   name: from-client
-  profile: local
+  version: 1.0.1123
+  profile: pre
 
 server:
   port: 50007
